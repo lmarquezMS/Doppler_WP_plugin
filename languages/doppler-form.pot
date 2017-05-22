@@ -1,0 +1,137 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Doppler Formulario 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-16 12:31+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Loco-Source-Locale: es_AR\n"
+"X-Generator: Loco - https://localise.biz/\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: C:\\wamp\\www\\test_plugin\\wp-content\\plugins\\doppler-"
+"formulario\\test\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Loco-Parser: loco_parse_po"
+
+#: doppler-formulario.php:81 doppler-formulario.php:250
+msgid "Doppler Formulario"
+msgstr ""
+
+#: doppler-formulario.php:112
+msgid "Ouch! The field is empty."
+msgstr ""
+
+#: doppler-formulario.php:130
+msgid "Ouch! Enter a valid API Key."
+msgstr ""
+
+#: doppler-formulario.php:149
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: doppler-formulario.php:176
+msgid "Connect your Subscription Form with Doppler"
+msgstr ""
+
+#: doppler-formulario.php:177
+msgid ""
+"Send emails directly from your Wordpress Form to your Doppler Lists! All you "
+"need to do is enter your API Key to link them up."
+msgstr ""
+
+#: doppler-formulario.php:178
+msgid "Read this post"
+msgstr ""
+
+#: doppler-formulario.php:180
+msgid "Pst! Remember that this benefit is only available for paid accounts"
+msgstr ""
+
+#: doppler-formulario.php:187
+msgid "Your account is connected"
+msgstr ""
+
+#: doppler-formulario.php:187
+msgid "Disconnect"
+msgstr ""
+
+#: doppler-formulario.php:193
+msgid "The process was a success! Your API Key is officially connected."
+msgstr ""
+
+#: doppler-formulario.php:197
+msgid "You're almost there! Go to the tab"
+msgstr ""
+
+#: doppler-formulario.php:197
+msgid ""
+"<b>Appearance>Widgets>Doppler Formulario</b> and choose the Lists where your "
+"new Subscribers will be saved"
+msgstr ""
+
+#: doppler-formulario.php:205 doppler-formulario.php:207
+msgid "Enter your API Key."
+msgstr ""
+
+#: doppler-formulario.php:208
+msgid "CONNECT"
+msgstr ""
+
+#: doppler-formulario.php:216
+msgid "Doppler is a product by"
+msgstr ""
+
+#: doppler-formulario.php:249
+msgid "Select the Lists you want to send your Subscribers to."
+msgstr ""
+
+#: doppler-formulario.php:273
+msgid "Thanks for Subscribing"
+msgstr ""
+
+#: doppler-formulario.php:276
+msgid "Email …"
+msgstr ""
+
+#: doppler-formulario.php:280
+msgid "Send"
+msgstr ""
+
+#: doppler-formulario.php:311
+msgid "Title"
+msgstr ""
+
+#: doppler-formulario.php:312
+msgid "Enter a descriptive title for your Form."
+msgstr ""
+
+#: doppler-formulario.php:315
+msgid "Subscription Lists"
+msgstr ""
+
+#: doppler-formulario.php:319
+msgid "Select the List that you want to import your Subscribers into."
+msgstr ""
+
+msgid "Don’t know where to find your Api Key?"
+msgstr ""
+
+msgid "Ouch! Enter a valid email address"
+msgstr ""
+
+msgid "Ouch! The field is empty"
+msgstr ""
+
+msgid "Ouch! Enter a valid API Key"
+msgstr ""
+
+msgid "Ouch! Invalid account"
+msgstr ""
