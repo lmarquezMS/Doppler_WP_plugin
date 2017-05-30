@@ -1,0 +1,48 @@
+form.dplr_form {
+  border-top: 1px solid rgb(121, 121, 121);
+  border-bottom: 1px solid rgb(121, 121, 121);
+
+  padding: 20px 0;
+
+
+  .input-field {
+    p.description {
+      display: block;
+      font-style: italic;
+      padding: 7px 15px 10px;
+      font-size: 12px;
+    }
+
+    &.required {
+      label {
+        &::after {
+          content: ' *';
+          color: #f71010;
+        }
+      }
+    }
+  }
+
+  .input-buttom {
+    text-align: center;
+
+    &::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    button {
+      &.left {
+        float: left;
+      }
+      &.right {
+        float: right;
+      }
+      &.fill {
+        width: 100%;
+      }
+    }
+  }
+
+}

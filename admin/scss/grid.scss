@@ -1,0 +1,18 @@
+.col__container {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &.two-columns {
+    .col {
+      width: 48%;
+    }
+  }
+
+  &.three-columns {
+    .col {
+      width: 32%;
+    }
+  }
+}

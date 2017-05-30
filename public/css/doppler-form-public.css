@@ -1,0 +1,26 @@
+form.dplr_form {
+  border-top: 1px solid #797979;
+  border-bottom: 1px solid #797979;
+  padding: 20px 0; }
+  form.dplr_form .input-field p.description {
+    display: block;
+    font-style: italic;
+    padding: 7px 15px 10px;
+    font-size: 12px; }
+  form.dplr_form .input-field.required label::after {
+    content: ' *';
+    color: #f71010; }
+  form.dplr_form .input-buttom {
+    text-align: center; }
+    form.dplr_form .input-buttom::after {
+      content: "";
+      clear: both;
+      display: table; }
+    form.dplr_form .input-buttom button.left {
+      float: left; }
+    form.dplr_form .input-buttom button.right {
+      float: right; }
+    form.dplr_form .input-buttom button.fill {
+      width: 100%; }
+
+/*# sourceMappingURL=doppler-form-public.css.map */

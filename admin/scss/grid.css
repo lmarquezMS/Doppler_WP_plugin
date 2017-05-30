@@ -1,0 +1,11 @@
+.col__container {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .col__container.two-columns .col {
+    width: 48%; }
+  .col__container.three-columns .col {
+    width: 32%; }
+
+/*# sourceMappingURL=grid.css.map */
