@@ -76,6 +76,28 @@
           </div>
         </div>
       </div>
+      <div class="grid">
+        <div class="col-4-5 panel nopd">
+          <div class="panel-header">
+            <h2>Edit confirmation options</h2>
+          </div>
+          <div class="panel-body grid">
+            <div class="dplr_input_section">
+              <label for="submit_text">Select an action</label>
+              <input type="radio" name="settings[form_confirmation_action]" value="message" /> Show Message<br>
+              <input type="radio" name="settings[form_confirmation_action]" value="redirect" /> Redirect to Url<br>
+            </div>
+            <div id="url_container" class="dplr_input_section">
+              <label for="settings[form_confirmation_value]">Url to redirect</label>
+              <input type="text" name="settings[form_confirmation_value]">
+            </div>
+            <div id="message_container" class="dplr_input_section">
+              <label for="settings[form_confirmation_value]">Message to show</label>
+              <textarea name="settings[form_confirmation_value]"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
     <input type="submit" value="ok">
   </form>
 </div>
@@ -84,4 +106,5 @@ var all_fields = <?php echo json_encode($dplr_fields); ?>;
 var form_fields = <?php echo json_encode($fields); ?>;
 var fieldsView = new FormFieldsView(all_fields, form_fields, jQuery("#fieldList"), jQuery("#formFields"));
 jQuery(".color-selector").colorpicker({color: "<?php echo $form->settings["button_color"]; ?>"});
+var actions_view = new FormActionsView("message", jQuery("input[name='settings[form_confirmation_action]']"), jQuery("#url_container"), jQuery("#message_container"));
 </script>

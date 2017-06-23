@@ -690,13 +690,9 @@
       color: #94917f;
       font-family: inherit;
       font-size: 15px;
-
       padding: 10px;
       position: relative;
       box-shadow: none;
-    }
-
-    input:not([type="checkbox"]), select {
       height: 42px;
     }
 
@@ -782,5 +778,9 @@
       }
     }
 
+  }
+
+  .filter-input {
+    display: none;
   }
 }

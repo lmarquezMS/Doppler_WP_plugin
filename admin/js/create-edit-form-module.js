@@ -1,9 +1,9 @@
-var FormFieldsView;
-var FieldModel;
+var FormFieldsView,
+	FormActionsView;
 
 (function( $ ) {
 
-	 FormFieldsView = (function() {
+	FormFieldsView = (function() {
 		function FormFieldsView(unselectedFields, selectedFields, unselectedFieldsContainer, selectedFieldsContainer) {
 			var _this = this;
 			this.unselectedFieldsContainer = unselectedFieldsContainer;
@@ -137,6 +137,48 @@ var FieldModel;
 
 		return FormFieldsView;
 
+	})();
+
+	FormActionsView = (function() {
+		function FormActionsView(actionSelected, selectorContainer, urlContainer, messageContainer) {
+			this.containerSelected = urlContainer;
+			this.selectorContainer = selectorContainer || NULL;
+			this.urlContainer = urlContainer || NULL;
+			this.messageContainer = messageContainer || NULL;
+			var _this = this;
+
+			this.selectorContainer.change(function(e) {
+				var selected = $(this).val();
+				_this.changeAction(selected);
+			});
+
+			selectorContainer.closest("form").submit(function() {
+				var hidden_container = $(this).find(".filter-input");
+
+				var hidden_inputs = hidden_container.find("input, textarea");
+
+				hidden_inputs.each(function() {
+					$(this).attr('name', '');
+				});
+			})
+		}
+
+		FormActionsView.prototype.changeAction = function(action) {
+			switch (action) {
+				case 'redirect':
+					this.urlContainer.removeClass("filter-input");
+					this.messageContainer.addClass("filter-input");
+					break;
+				case 'message':
+					this.messageContainer.removeClass("filter-input");
+					this.urlContainer.addClass("filter-input");
+					break; 
+				default:
+					break;
+			}
+		}
+
+		return FormActionsView;
 	})();
 
 })(jQuery);

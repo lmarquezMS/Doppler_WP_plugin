@@ -555,8 +555,7 @@
       font-size: 15px;
       padding: 10px;
       position: relative;
-      box-shadow: none; }
-    .dplr .dplr_input_section input:not([type="checkbox"]), .dplr .dplr_input_section select {
+      box-shadow: none;
       height: 42px; }
     .dplr .dplr_input_section textarea {
       min-height: 200px; }
@@ -601,5 +600,7 @@
         background: #f9f9f9; }
       .dplr table tbody tr:nth-child(even) {
         background: #ffffff; }
+  .dplr .filter-input {
+    display: none; }
 
 /*# sourceMappingURL=doppler-form-admin.css.map */

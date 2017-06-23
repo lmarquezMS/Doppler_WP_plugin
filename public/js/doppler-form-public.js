@@ -1,6 +1,6 @@
 (function( $ ) {
 	'use strict';
-console.log('hola manola');
+
 	$(document).ready(function() {
 
 		$("form.dplr_form input[type='text'].date").each(function() {
@@ -18,8 +18,12 @@ console.log('hola manola');
 		$('.dplr_form').submit(function(ev) {
 			ev.preventDefault();
 
+			
+
 			var subscriber = {},
 				list_id = $("input[name='list_id']").val();
+
+			var form = $(this);
 
 			subscriber.email = $("input[name='EMAIL']").val();
 			subscriber.fields = [];
@@ -43,12 +47,37 @@ console.log('hola manola');
 				subscriber.fields.push(field);
 			});
 
-
+			form.fadeOut("800",function() {console.log("termino");});
 
 			$.post(ajax_object.ajax_url, {"action": 'submit_form', "subscriber": subscriber, "list_id": list_id}, function(res) {
+				var action_type = form.attr('data-action-type'),
+					action_value = form.attr('data-action-value');
 
+				performPostAction(action_type, action_value, form);
 			});
 		});
 	});
+
+	function performPostAction(action_type, action_value, form) {
+		switch (action_type) {
+			case 'redirect':
+				action_value = action_value.startsWith("http") ? action_value : 'http://' + action_value;
+				window.location = action_value;
+				break;
+			case 'message':
+				var post_action_message = $("<p class='post_action_message'>" + action_value + "</p>").hide();
+				form.after(post_action_message);
+				post_action_message.fadeIn("fast");
+				setTimeout(function() {
+					form.fadeIn("slow");
+					post_action_message.fadeOut("slow", function() {
+						$(this).remove();
+					});
+				}, 2000);
+				break;				
+			default:
+				break;
+		}
+	}
 
 })( jQuery );

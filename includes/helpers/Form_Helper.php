@@ -9,7 +9,8 @@ class DPLR_Form_helper
     $form_class = isset($context['classes']) ? implode(" ", $context['classes']) : "";
 
     ?>
-    <form class="dplr_form <?php echo $form_class; ?>" action="<?php echo $form_action; ?>" method="<?php echo $form_method; ?>">
+	<p style="display: none;"><?php echo $form->settings["form_confirmation_value"];?></p>
+	<form data-action-type="<?php echo $form->settings["form_confirmation_action"]?>" data-action-value="<?php echo $form->settings["form_confirmation_value"];?>" class="dplr_form <?php echo $form_class; ?>" action="<?php echo $form_action; ?>" method="<?php echo $form_method; ?>">
       <input type="hidden" name="list_id" value="<?php echo $form->list_id; ?>">
     <?php foreach ($fields as $field) {
       $label = isset($field->settings['label']) ? $field->settings['label'] : $field->name;
