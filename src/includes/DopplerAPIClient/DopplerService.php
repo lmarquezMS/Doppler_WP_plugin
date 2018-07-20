@@ -16,7 +16,7 @@ class Doppler_Service
     if ($credentials)
       $this->setCredentials($credentials);
 
-    $this->baseUrl = 'https://restapi.fromdoppler.com/accounts/'. $config[ 'user_account' ] . '/';
+    $this->baseUrl = 'https://restapi.fromdoppler.com/accounts/'. $config['credentials'][ 'user_account' ] . '/';
 
     $this->resources = [
 	  'home'	=> new Doppler_Service_Home_Resource(
@@ -95,10 +95,10 @@ class Doppler_Service
         return true;
         break;
       case 401:
-        throw new Doppler_Exception_Invalid_APIKey("Invalid API Key", 1);
+        //TODO: Return formated error 
         break;
       case 403:
-        throw new Doppler_Exception_Invalid_Account("User Account not found", 1);
+        //TODO: Return formated error
         break;
     }
 
